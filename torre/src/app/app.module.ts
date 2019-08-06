@@ -10,6 +10,14 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { Globals } from "./globals";
 import { TenantComponent } from './pages/tenant/tenant.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+
+
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
+
+
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'home',      component: HomeComponent },
@@ -26,6 +34,9 @@ const appRoutes: Routes = [
     NotFoundComponent
   ],
   imports: [
+    BrowserAnimationsModule,
+    MatButtonModule, 
+    MatCheckboxModule,
     BrowserModule,
     RouterModule.forRoot(
       appRoutes,

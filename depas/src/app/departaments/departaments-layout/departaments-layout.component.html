@@ -1,0 +1,53 @@
+<p>departaments-layout works!</p>
+<button (click)="sendEvent()">
+	Lanzar evento
+</button>
+<mat-list>
+		<mat-list-item *ngFor="let departament of departaments">
+			<mat-icon matListIcon>folder</mat-icon>
+			<h3 matLine> {{departament.title}} </h3>
+			<p matLine>
+				<span> {{departament.title}} </span>
+				<span class="demo-2"> -- {{departament.id}} </span>
+			</p>
+		</mat-list-item>
+	</mat-list>
+<mat-list>
+	<mat-list-item> Pepper </mat-list-item>
+	<mat-list-item> Salt </mat-list-item>
+	<mat-list-item> Paprika </mat-list-item>
+</mat-list>
+
+<mat-list dense>
+	<mat-list-item> Pepper </mat-list-item>
+	<mat-list-item> Salt </mat-list-item>
+	<mat-list-item> Paprika </mat-list-item>
+</mat-list>
+<div layout="row">
+	<div flex="20">
+		[flex="20"]
+	</div>
+	<div flex="70">
+		[flex="70"]
+	</div>
+	<div flex="" hide-sm="" hide-xs="">
+		[flex]
+	</div>
+</div>
+<div>
+	<mat-grid-list cols="4">
+		<mat-grid-tile>
+			<div>
+				<mat-list>
+					<mat-list-item> Pepper </mat-list-item>
+					<mat-list-item> Salt </mat-list-item>
+					<mat-list-item> Paprika </mat-list-item>
+				</mat-list>
+			</div>
+		</mat-grid-tile>
+		<mat-grid-tile [colspan]="3">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, iure laudantium sapiente sit in magnam, qui
+			cupiditate neque ipsum dicta similique culpa quas! Deleniti, ad? Vero voluptatem laboriosam soluta dolores!
+		</mat-grid-tile>
+	</mat-grid-list>
+</div>
